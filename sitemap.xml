@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tpmresidency.com/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tpmresidency.com/assets/tpm-hero-arrival.png</image:loc>
+      <image:title>TPM Residency Luxury Hotel Exterior</image:title>
+      <image:caption>TPM Residency Hotel in Pazhayangadi, Kondotty</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tpmresidency.com/pictures/reception_clean.webp</image:loc>
+      <image:title>TPM Residency Grand Reception</image:title>
+      <image:caption>Arrival lobby and front desk at TPM Residency</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tpmresidency.com/pictures/building_clean.webp</image:loc>
+      <image:title>TPM Residency Architectural Facade</image:title>
+      <image:caption>Modern hotel building located in Kondotty</image:caption>
+    </image:image>
+  </url>
+</urlset>

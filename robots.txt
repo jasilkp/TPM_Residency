@@ -1,0 +1,6 @@
+# Robots.txt for TPM Residency
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tpmresidency.com/sitemap.xml
