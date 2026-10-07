@@ -49,8 +49,12 @@
   <meta name="format-detection" content="telephone=no">
 
   <!-- Favicons & Touch Icons -->
-  <link rel="icon" type="image/svg+xml" href="Logo%20folder/tpm-residency-logo.svg">
-  <link rel="apple-touch-icon" href="Logo%20folder/tpm-residency-logo.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/Logo%20folder/tpm-residency-logo.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Fonts Preconnect & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,85 +68,46 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Hotel",
+    "name": "TPM Residency",
+    "url": "https://tpmresidency.com/",
+    "logo": "https://tpmresidency.com/Logo%20folder/tpm-residency-logo.svg",
+    "image": "https://tpmresidency.com/assets/tpm-hero-arrival.png",
+    "description": "Experience contemporary luxury and refined comfort at TPM Residency in Pazhayangadi, Kondotty. Modern rooms, rooftop dining, airport proximity (CCJ) & quiet hospitality in Malappuram. Opening soon.",
+    "telephone": "+91 79028 88990",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "TPM Tower, Pazhayangadi",
+      "addressLocality": "Kondotty",
+      "addressRegion": "Kerala",
+      "postalCode": "673638",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 11.1464,
+      "longitude": 75.9644
+    },
+    "amenityFeature": [
       {
-        "@type": "Hotel",
-        "@id": "https://tpmresidency.com/#hotel",
-        "name": "TPM Residency",
-        "alternateName": "TPM Residency Kondotty",
-        "description": "TPM Residency is a polished hotel address in Pazhayangadi, Kondotty, Malappuram offering comfortable luxury rooms, rooftop dining, airport proximity, and quiet hospitality.",
-        "url": "https://tpmresidency.com/",
-        "logo": "https://tpmresidency.com/Logo%20folder/tpm-residency-logo.png",
-        "telephone": ["+91 79028 88990", "+91 73064 24954"],
-        "image": [
-          "https://tpmresidency.com/assets/tpm-hero-arrival.png",
-          "https://tpmresidency.com/pictures/reception_clean.webp",
-          "https://tpmresidency.com/pictures/building_clean.webp",
-          "https://tpmresidency.com/assets/tpm-hero-room.jpg",
-          "https://tpmresidency.com/assets/tpm-dining-lounge.png"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "TPM Tower, Pazhayangadi",
-          "addressLocality": "Kondotty",
-          "addressRegion": "Kerala",
-          "postalCode": "673638",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 11.1464,
-          "longitude": 75.9644
-        },
-        "hasMap": "https://maps.google.com/maps?q=Pazhayangadi,+Kondotty,+Malappuram,+Kerala+673638",
-        "priceRange": "₹₹ - Moderate / Luxury",
-        "currenciesAccepted": "INR",
-        "paymentAccepted": "Cash, Credit Card, UPI",
-        "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Best Parking Facility",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Airport Pickup & Transfer (Calicut Airport CCJ)",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Rooftop Dining & Lounge",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "24-Hour Front Desk & Service",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "High-Speed Wi-Fi",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Air Conditioned Executive & Deluxe Suites",
-            "value": true
-          }
-        ],
-        "checkinTime": "14:00",
-        "checkoutTime": "11:00",
-        "petsAllowed": false
+        "@type": "LocationFeatureSpecification",
+        "name": "parking",
+        "value": true
       },
       {
-        "@type": "WebSite",
-        "@id": "https://tpmresidency.com/#website",
-        "url": "https://tpmresidency.com/",
-        "name": "TPM Residency",
-        "description": "Official website of TPM Residency Hotel in Kondotty, Malappuram, Kerala.",
-        "publisher": {
-          "@id": "https://tpmresidency.com/#hotel"
-        }
+        "@type": "LocationFeatureSpecification",
+        "name": "rooftop dining",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "24-hour service",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "airport pickup",
+        "value": true
       }
     ]
   }
@@ -613,7 +578,7 @@
 
         <div class="gallery-stage">
           <img class="gallery-stage-img" id="galleryStageImg" src="pictures/reception_clean.webp"
-            alt="TPM Residency grand reception and arrival counter">
+            alt="TPM Residency grand reception and arrival counter" width="1280" height="960">
           <p class="gallery-stage-caption" id="galleryStageCaption">Polished front desk and welcoming reception prepared
             for swift, calm check-ins.</p>
         </div>
