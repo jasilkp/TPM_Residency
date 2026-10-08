@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tpmresidency.com/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tpmresidency.com/pictures/building_clean.webp</image:loc>
+      <image:title>TPM Residency Hotel Building - Rooms Near Kondotty</image:title>
+      <image:caption>TPM Residency modern hotel building and luxury rooms in Pazhayangadi, Kondotty, Malappuram</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tpmresidency.com/pictures/reception_clean.webp</image:loc>
+      <image:title>TPM Residency Grand Reception &amp; Lobby</image:title>
+      <image:caption>Arrival lobby and 24-hour reception at TPM Residency Kondotty</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tpmresidency.com/assets/tpm-hero-arrival.png</image:loc>
+      <image:title>TPM Residency Luxury Hotel Exterior</image:title>
+      <image:caption>TPM Residency Hotel in Pazhayangadi, Kondotty near Calicut Airport</image:caption>
+    </image:image>
   </url>
 </urlset>
