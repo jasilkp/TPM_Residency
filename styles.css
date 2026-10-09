@@ -740,8 +740,8 @@ h3 {
   top: 0;
   width: 78%;
   height: 86%;
-  background-image: url("pictures/reception_clean.webp");
-  background-position: center;
+  background-image: url("pictures/building_clean.webp");
+  background-position: 50% 25%;
 }
 
 .small-photo {
@@ -750,8 +750,8 @@ h3 {
   width: 46%;
   height: 44%;
   border: 10px solid var(--white);
-  background-image: url("pictures/building_clean.webp");
-  background-position: 50% 25%;
+  background-image: url("pictures/reception_clean.webp");
+  background-position: center;
 }
 
 .story-copy > p:not(.eyebrow) {

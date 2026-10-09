@@ -158,14 +158,14 @@ const storyPhotos = document.querySelectorAll('.story-photo');
 
 const galleryItems = [
   {
+    src: 'pictures/building_clean.webp',
+    title: 'TPM Residency Building & Facade',
+    caption: 'Modern luxury hotel building and premium rooms located in Pazhayangadi, Kondotty, Malappuram near Calicut Airport.'
+  },
+  {
     src: 'pictures/reception_clean.webp',
     title: 'Grand Reception & Lobby',
     caption: 'Polished front desk and welcoming arrival reception prepared for swift, calm check-ins.'
-  },
-  {
-    src: 'pictures/building_clean.webp',
-    title: 'TPM Residency Building - Rooms Near Kondotty',
-    caption: 'Modern luxury hotel building and premium rooms located in Pazhayangadi, Kondotty, Malappuram near Calicut Airport.'
   },
   {
     src: 'assets/tpm-hero-room.jpg',
