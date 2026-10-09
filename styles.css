@@ -2713,3 +2713,24 @@ footer {
     height: 38px;
   }
 }
+
+/* --- Hide Netlify Injected Badges, Drawers & Widgets --- */
+#netlify-drawer,
+.netlify-drawer,
+[data-netlify-drawer],
+[id*="netlify-drawer"],
+[class*="netlify-badge"],
+[class*="netlify-drawer"],
+.netlify-badge,
+.netlify-feedback-badge,
+#netlify-identity-widget,
+iframe[src*="netlify"],
+iframe[id*="netlify"],
+div[data-testid*="netlify"],
+[data-testid="netlify-drawer"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
