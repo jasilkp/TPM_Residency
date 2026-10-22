@@ -287,6 +287,20 @@ const galleryItems = [
     title: 'TPM Tower Glass Facade',
     caption: 'Modern multi-story blue glass exterior of TPM Tower under the evening sky.',
     category: 'Others'
+  },
+  {
+    src: 'pictures/Others/photo_2026-10-22_19-13-11.webp',
+    thumb: 'pictures/Others/photo_2026-10-22_19-13-11_thumb.webp',
+    title: 'Guest Elevator Lobby & Conference Entrance',
+    caption: 'Modern guest elevator lobby, staircase, and glass entry leading into the conference hall.',
+    category: 'Others'
+  },
+  {
+    src: 'pictures/Others/photo_2026-10-22_19-13-25.webp',
+    thumb: 'pictures/Others/photo_2026-10-22_19-13-25_thumb.webp',
+    title: 'Digital Elevator Call Panel',
+    caption: 'Touch-sensitive digital elevator controls installed on polished marble wall finish.',
+    category: 'Others'
   }
 ];
 
