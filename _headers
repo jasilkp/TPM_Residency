@@ -1,0 +1,36 @@
+# Netlify / Cloudflare Pages Caching Directives for Maximum Performance
+
+# HTML: Always check for updates, load fast with ETag/revalidation
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Static Assets & Images: Cache aggressively for 1 year (0ms repeat load)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/pictures/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/Logo%20folder/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/*.js
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400

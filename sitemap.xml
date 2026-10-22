@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tpmresidency.com/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://tpmresidency.com/pictures/building_clean.webp</image:loc>
-      <image:title>TPM Residency Hotel Building - Rooms Near Kondotty</image:title>
-      <image:caption>TPM Residency modern hotel building and luxury rooms in Pazhayangadi, Kondotty, Malappuram</image:caption>
+      <image:loc>https://tpmresidency.com/pictures/tpm-residency-facade.webp</image:loc>
+      <image:title>TPM Residency Luxury Hotel Exterior &amp; Illuminated Facade - Kondotty</image:title>
+      <image:caption>TPM Residency modern luxury hotel entrance, architecture, and luxury rooms in Pazhayangadi, Kondotty, Malappuram</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://tpmresidency.com/pictures/reception_clean.webp</image:loc>
