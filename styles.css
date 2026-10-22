@@ -1462,6 +1462,39 @@ footer {
   color: var(--white);
 }
 
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, .9);
+  text-decoration: none;
+  font-family: Manrope, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.footer-social-link:hover {
+  background: rgba(255, 255, 255, .18);
+  border-color: rgba(255, 255, 255, .35);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.footer-social-link svg {
+  flex-shrink: 0;
+}
+
 .back-to-top {
   position: fixed;
   right: 24px;
