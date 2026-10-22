@@ -301,6 +301,13 @@ const galleryItems = [
     title: 'Digital Elevator Call Panel',
     caption: 'Touch-sensitive digital elevator controls installed on polished marble wall finish.',
     category: 'Others'
+  },
+  {
+    src: 'pictures/Others/photo_2026-10-21_12-30-24.webp',
+    thumb: 'pictures/Others/photo_2026-10-21_12-30-24_thumb.webp',
+    title: 'Illuminated Highway Pylon Signage',
+    caption: 'Prominent nighttime highway pylon totem displaying TPM Residency room and conference facilities.',
+    category: 'Others'
   }
 ];
 

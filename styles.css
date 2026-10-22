@@ -215,11 +215,21 @@ img {
 }
 
 .hero-slide-2 {
+  background-image: url("assets/tpm-hero-night-building.webp");
+  background-position: center 32%;
+}
+
+.hero-slide-3 {
   background-image: url("assets/tpm-hero-lobby-door.webp");
   background-position: center;
 }
 
-.hero-slide-3 {
+.hero-slide-4 {
+  background-image: url("assets/tpm-hero-aerial-drone.webp");
+  background-position: center;
+}
+
+.hero-slide-5 {
   background-image: url("assets/tpm-hero-glass.webp");
   background-position: 60% center;
 }
@@ -1987,11 +1997,22 @@ footer {
   }
 
   .hero-slide-2 {
+    background-image: url("assets/tpm-hero-night-building-mobile.webp");
     background-position: center;
     filter: none !important;
   }
 
   .hero-slide-3 {
+    background-position: center;
+    filter: none !important;
+  }
+
+  .hero-slide-4 {
+    background-position: center;
+    filter: none !important;
+  }
+
+  .hero-slide-5 {
     background-image: url("pictures/Reception/photo_2026-10-21_13-28-22.webp");
     background-position: center;
     filter: none !important;
