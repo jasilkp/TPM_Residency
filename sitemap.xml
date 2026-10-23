@@ -3,13 +3,23 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tpmresidency.com/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
+      <image:loc>https://tpmresidency.com/pictures/building_clean.webp</image:loc>
+      <image:title>TPM Residency Luxury Facade &amp; Illuminated Entrance</image:title>
+      <image:caption>TPM Residency modern architecture and entrance in Pazhayangadi, Kondotty, Malappuram</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tpmresidency.com/pictures/Others/photo_2026-10-21_13-28-59.webp</image:loc>
+      <image:title>TPM Residency Architectural Facade</image:title>
+      <image:caption>TPM Residency gold architectural facade and glass entrance in Kondotty</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://tpmresidency.com/pictures/Others/photo_2026-10-21_13-35-55.webp</image:loc>
-      <image:title>TPM Residency Luxury Hotel Illuminated Front Entrance - Kondotty</image:title>
-      <image:caption>TPM Residency modern luxury hotel illuminated entrance and architecture in Pazhayangadi, Kondotty, Malappuram</image:caption>
+      <image:title>TPM Residency Luxury Rooms Illuminated Front Entrance - Kondotty</image:title>
+      <image:caption>TPM Residency modern luxury illuminated entrance in Pazhayangadi, Kondotty, Malappuram</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://tpmresidency.com/pictures/reception_clean.webp</image:loc>
@@ -18,8 +28,8 @@
     </image:image>
     <image:image>
       <image:loc>https://tpmresidency.com/assets/tpm-hero-arrival.png</image:loc>
-      <image:title>TPM Residency Luxury Hotel Exterior</image:title>
-      <image:caption>TPM Residency Hotel in Pazhayangadi, Kondotty near Calicut Airport</image:caption>
+      <image:title>TPM Residency Luxury Accommodation Exterior</image:title>
+      <image:caption>TPM Residency in Pazhayangadi, Kondotty near Calicut Airport</image:caption>
     </image:image>
   </url>
 </urlset>

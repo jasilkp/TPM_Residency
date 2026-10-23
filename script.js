@@ -80,12 +80,12 @@ if (heroSlides.length > 1 && !reducedMotion) {
 
     setTimeout(() => {
       outgoing.classList.remove('exit-left');
-    }, 900);
+    }, 700);
   };
 
   const startAutoPlay = () => {
     clearInterval(autoPlayTimer);
-    autoPlayTimer = setInterval(() => goToSlide('next'), 5600);
+    autoPlayTimer = setInterval(() => goToSlide('next'), 4200);
   };
 
   const prevBtn = document.querySelector('.hero-arrow-prev');
@@ -222,7 +222,7 @@ const galleryItems = [
     src: 'pictures/Others/photo_2026-10-21_13-30-20.webp',
     thumb: 'pictures/Others/photo_2026-10-21_13-30-20_thumb.webp',
     title: 'Guest Lounge & Chandelier',
-    caption: 'Ambient lighting and tranquil sitting space for hotel guests and visitors.',
+    caption: 'Ambient lighting and tranquil sitting space for residency guests and visitors.',
     category: 'Others'
   },
   {
@@ -263,7 +263,7 @@ const galleryItems = [
   {
     src: 'pictures/Others/photo_2026-10-21_13-36-10.webp',
     thumb: 'pictures/Others/photo_2026-10-21_13-36-10_thumb.webp',
-    title: 'Daytime Hotel Facade & Portico',
+    title: 'Daytime Facade & Portico',
     caption: 'Clean daytime view of TPM Residency entrance surrounded by landscaped greenery.',
     category: 'Others'
   },
