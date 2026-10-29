@@ -1,3 +1,4 @@
 # Redirects for Smart QR and Short Links
 /qr        /card      301
 /connect   /card      301
+

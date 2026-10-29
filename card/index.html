@@ -87,7 +87,7 @@
     /* Cover Banner */
     .card-cover {
       position: relative;
-      height: 180px;
+      height: 200px;
       width: 100%;
       overflow: hidden;
       background: var(--navy);
@@ -97,8 +97,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 30%;
-      filter: brightness(0.85);
+      object-position: center 50%;
+      filter: brightness(0.92);
     }
 
     .card-cover-overlay {
@@ -123,13 +123,13 @@
     }
 
     .logo-badge {
-      width: 110px;
-      height: 110px;
+      width: 114px;
+      height: 114px;
       border-radius: 50%;
-      background: #ffffff;
+      background: #1e2938;
       border: 3px solid var(--gold);
-      padding: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(223, 173, 79, 0.28);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 22px rgba(223, 173, 79, 0.32);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -139,7 +139,8 @@
     .logo-badge img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
+      display: block;
     }
 
     .hotel-name {
@@ -665,7 +666,10 @@
   <div class="card-wrap">
     <!-- Header Banner -->
     <div class="card-cover">
-      <img src="/assets/tpm-hero-night-building.webp" alt="TPM Residency building at night" width="480" height="180" fetchpriority="high">
+      <img src="/pictures/Reception/photo_2026-10-21_13-28-22.webp"
+           srcset="/pictures/Reception/photo_2026-10-21_13-28-22_thumb.webp 480w, /pictures/Reception/photo_2026-10-21_13-28-22.webp 1280w"
+           sizes="(max-width: 480px) 100vw, 480px"
+           alt="TPM Residency illuminated reception desk" width="480" height="200" fetchpriority="high">
       <div class="card-cover-overlay"></div>
     </div>
 
@@ -673,7 +677,7 @@
       <!-- Profile Header -->
       <header class="profile-header">
         <div class="logo-badge">
-          <img src="/Logo%20folder/tpm-residency-logo.svg" alt="TPM Residency Logo" width="90" height="90">
+          <img src="/Logo%20folder/TPM_Residency_Google_Business_Logo_Navy_1080x1080.png" alt="TPM Residency Logo" width="114" height="114">
         </div>
         <h1 class="hotel-name">TPM Residency</h1>
         <div class="verified-pill">
