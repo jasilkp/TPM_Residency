@@ -1,4 +1,5 @@
-# Redirects for Smart QR and Short Links
-/qr        /card      301
-/connect   /card      301
-
+# Redirects for Smart QR, Short Links & Review Stand
+/qr        /card              301
+/connect   /card              301
+/stand     /card/stand.html   200
+/review    https://g.page/r/Ca7Um1hXkk3iEBM/review?utm_source=gbp&utm_medium=reviews&utm_campaign=qr   302

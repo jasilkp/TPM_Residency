@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPM Residency - Printable Review Desk Stand</title>
+  <meta name="description" content="Print-ready luxury acrylic desk stand for TPM Residency reception. Guests scan to rate their stay and leave a 5-star Google Review.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-bg: #090c1a;
+      --navy-mid: #14112e;
+      --navy-purple: #1e133c;
+      --gold: #dfad4f;
+      --gold-light: #f5d778;
+      --gold-dark: #b8862d;
+      --text-white: #ffffff;
+      --text-dim: #bac5d8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #060913;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 40px;
+    }
+
+    /* Screen Top Control Bar */
+    .screen-controls {
+      width: 100%;
+      max-width: 540px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .controls-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-link {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      flex: 1;
+      min-width: 140px;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, filter 0.15s ease;
+      border: none;
+    }
+
+    .action-btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #dfad4f 0%, #f6d87e 50%, #c99335 100%);
+      color: #07111c;
+      box-shadow: 0 4px 16px rgba(223, 173, 79, 0.35);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(223, 173, 79, 0.35);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .print-tip {
+      font-size: 12px;
+      color: var(--text-dim);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Desk Stand Card Container */
+    .stand-wrap {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 2 / 3;
+      position: relative;
+      background: linear-gradient(175deg, #0e152e 0%, #1f123b 45%, #110e24 75%, #080a16 100%);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(223, 173, 79, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 24px 24px;
+      text-align: center;
+      page-break-inside: avoid;
+    }
+
+    /* Decorative Geometric Tech Constellation overlay */
+    .tech-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.25;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(223, 173, 79, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(147, 51, 234, 0.2) 0%, transparent 50%);
+    }
+
+    .tech-lines {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    /* Double Gold Border */
+    .stand-border-outer {
+      position: absolute;
+      inset: 12px;
+      border: 1.5px solid rgba(223, 173, 79, 0.45);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    .stand-border-inner {
+      position: absolute;
+      inset: 16px;
+      border: 2px solid rgba(245, 215, 120, 0.85);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    /* Stand Content */
+    .stand-header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stand-logo-badge {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #0e1c28;
+      border: 2px solid var(--gold-light);
+      padding: 3px;
+      box-shadow: 0 0 16px rgba(223, 173, 79, 0.35);
+      margin-bottom: 12px;
+    }
+
+    .stand-logo-badge img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .scan-here-title {
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      text-shadow: 0 0 14px rgba(245, 215, 120, 0.4);
+      margin-bottom: 4px;
+    }
+
+    .scan-here-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 14.5px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .scan-instruction {
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 320px;
+      line-height: 1.4;
+    }
+
+    /* Central Framed QR Plaque */
+    .stand-qr-section {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .qr-frame {
+      background: linear-gradient(135deg, #dfad4f 0%, #f6d87e 50%, #b8862d 100%);
+      padding: 6px;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(223, 173, 79, 0.3);
+      position: relative;
+    }
+
+    .qr-inner-white {
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 11px;
+      display: block;
+    }
+
+    .qr-inner-white img {
+      width: 175px;
+      height: 175px;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+
+    /* Bottom Review Section */
+    .stand-footer-section {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .review-us-title {
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+    }
+
+    .stars-row {
+      display: flex;
+      gap: 6px;
+      color: #f5d778;
+      margin: 2px 0;
+    }
+
+    .stars-row svg {
+      width: 20px;
+      height: 20px;
+      fill: #f5d778;
+      filter: drop-shadow(0 0 4px rgba(245, 215, 120, 0.5));
+    }
+
+    .opinion-matters {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 13.5px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+
+    .soc-pill {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10.5px;
+      color: var(--text-dim);
+    }
+
+    .soc-pill svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gold-light);
+    }
+
+    .hotel-phone-line {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+    }
+
+    .thank-you-title {
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .hotel-subfoot {
+      font-size: 9.5px;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Print Styles */
+    @media print {
+      @page {
+        size: A5 portrait;
+        margin: 0;
+      }
+
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 100vh !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .screen-controls {
+        display: none !important;
+      }
+
+      .stand-wrap {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        width: 148mm !important;
+        height: 210mm !important;
+        max-width: none !important;
+        aspect-ratio: auto !important;
+        padding: 16mm 14mm !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Controls (hidden on print) -->
+  <header class="screen-controls">
+    <div class="controls-nav">
+      <a href="/card" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to Digital Card</span>
+      </a>
+      <span style="font-size: 12px; color: var(--gold-light); font-weight: 700;">TPM Residency Desk Stand</span>
+    </div>
+
+    <div class="btn-group">
+      <button type="button" onclick="window.print()" class="action-btn btn-primary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Print Stand</span>
+      </button>
+
+      <a href="/assets/tpm-review-desk-stand.png" download="TPM_Residency_Review_Stand.png" class="action-btn btn-secondary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Download PNG</span>
+      </a>
+
+      <a href="https://g.page/r/Ca7Um1hXkk3iEBM/review?utm_source=gbp&utm_medium=reviews&utm_campaign=qr" target="_blank" rel="noopener noreferrer" class="action-btn btn-secondary" style="min-width: 120px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+        <span>Test Link</span>
+      </a>
+    </div>
+
+    <p class="print-tip">
+      Ready for printing onto A5 paper or 4&times;6&Prime; photo paper to slide into an acrylic tent stand.
+    </p>
+  </header>
+
+  <!-- Printable Acrylic Desk Stand Card -->
+  <main class="stand-wrap" id="standCard">
+    <div class="tech-bg"></div>
+    <div class="stand-border-outer"></div>
+    <div class="stand-border-inner"></div>
+
+    <!-- Header -->
+    <section class="stand-header">
+      <div class="stand-logo-badge">
+        <img src="/Logo%20folder/TPM_Residency_Google_Business_Logo_Navy_1080x1080.png" alt="TPM Residency Logo" width="58" height="58">
+      </div>
+      <h1 class="scan-here-title">SCAN HERE</h1>
+      <p class="scan-here-sub">FOR DIGITAL VISITING CARD &amp; REVIEWS</p>
+      <p class="scan-instruction">Open your phone camera &amp; point it at the QR code.<br>Tap the link that appears on screen.</p>
+    </section>
+
+    <!-- Center QR Code Plaque -->
+    <section class="stand-qr-section">
+      <div class="qr-frame">
+        <div class="qr-inner-white">
+          <img src="/assets/RatingQRdownload.png" alt="Scan to rate TPM Residency on Google" width="175" height="175">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Review Section -->
+    <footer class="stand-footer-section">
+      <h2 class="review-us-title">REVIEW US!</h2>
+      <div class="stars-row" aria-label="5 stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p class="opinion-matters">Your opinion matters!</p>
+
+      <div class="social-row">
+        <span class="soc-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7.07 7.07 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7.07 7.07 0 0 1 11 3.07V3a1 1 0 0 1 2 0v.07A7.07 7.07 0 0 1 18.93 9H19a1 1 0 0 1 0 2h-.07A7.07 7.07 0 0 1 13 16.93z"/></svg>
+          Google
+        </span>
+        <span class="soc-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @residencytpm
+        </span>
+        <span class="soc-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.015v4.985h-2v-4.985h2zm-1-14.015c5.514 0 10 4.486 10 10 0 5.514-4.486 10-10 10s-10-4.486-10-10 4.486-10 10-10z"/></svg>
+          tpmresidency.com
+        </span>
+      </div>
+
+      <p class="hotel-phone-line">Reception: +91 79028 88990 &bull; +91 73064 24954</p>
+      <h3 class="thank-you-title">THANK YOU</h3>
+      <p class="hotel-subfoot">TPM RESIDENCY &bull; PAZHAYANGADI, KONDOTTY, MALAPPURAM</p>
+    </footer>
+  </main>
+
+</body>
+</html>
